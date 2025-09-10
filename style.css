@@ -151,8 +151,8 @@ body {
 
 .ab-buttons {
   display: flex;
-  gap: 15px;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .circle {
