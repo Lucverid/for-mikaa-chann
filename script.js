@@ -1,6 +1,6 @@
 const slides = [
-  "Jyaa Mikaa Chann",
-  "Ekhem sudah tanggal 17 September aja Nich",
+  "Jyaa Mikaa Chann :)",
+  "Ekhem sudah tanggal 17 September aja Nih",
   "Mwhehe Maaf ya Mikaa, aku ngga bisa ngerayain langsung. Tapi.. semoga dengan hadiah dan perayaan kecil ini bisa ngebuat Mikaa seneng",
   "I'm proud of you, and I always will be <3"
 ];
@@ -22,7 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnA = document.querySelector(".circle:nth-child(1)");
   const btnB = document.querySelector(".circle:nth-child(2)");
 
-  // START BUTTON
+  const btnMessage = document.getElementById('btn-message');
+  const btnGallery = document.getElementById('btn-gallery');
+  const btnMusic = document.getElementById('btn-music');
+  const btnTetris = document.getElementById('btn-tetris');
+
+  // 🎁 Tombol Tambahan
+  btnMessage.addEventListener('click', () => {
+    subtitle.innerHTML = "📩 Pesan spesial untuk Mikaa:<br><br><em>“Jangan pernah ragu untuk jadi dirimu sendiri. Aku percaya kamu bisa melewati semuanya dengan luar biasa.”</em>";
+  });
+
+  btnGallery.addEventListener('click', () => {
+    subtitle.innerHTML = "📷 Galeri:<br><img src='https://i.imgur.com/SmY0XGv.jpeg' style='width:100%;max-width:200px'><br><em>Cantik banget kan? 😍</em>";
+  });
+
+  btnMusic.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      subtitle.innerHTML = "🎵 Musik diputar!";
+    } else {
+      bgMusic.pause();
+      subtitle.innerHTML = "🎵 Musik dihentikan!";
+    }
+  });
+
+  btnTetris.addEventListener('click', () => {
+    subtitle.innerHTML = "🧱 Tetris belum tersedia ya... Tunggu update berikutnya! 😆";
+  });
+
+  // Mulai slide
   startBtn.addEventListener("click", () => {
     if (slideStarted) return;
     slideStarted = true;
@@ -53,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   });
 
-  // RESET BUTTON
   selectBtn.addEventListener("click", () => {
     clearInterval(typingInterval);
     clearTimeout(nextSlideTimeout);
@@ -74,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     bgMusic.currentTime = 0;
   });
 
-  // SHOW SLIDE FUNCTION
   function showSlide(text) {
     subtitle.innerText = "";
     subtitle.style.whiteSpace = "normal";
@@ -117,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // PILIHAN A/B SLIDE TERAKHIR
   function initChoiceEvents() {
     document.addEventListener("keydown", onChoice);
     btnA.addEventListener("click", handleClickA);
@@ -136,7 +161,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function onChoice(e) {
     if (!slideStarted) return;
-
     if (e.key.toLowerCase() === "a") handleClickA();
     else if (e.key.toLowerCase() === "b") handleClickB();
   }
@@ -147,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnB.removeEventListener("click", handleClickB);
   }
 
-  // MINI-GAME TANGKAP KUCING
+  // MINI GAME
   function startCatGame() {
     screen.innerHTML = "";
     subtitle.innerText = "";
@@ -182,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let score = 0;
     const target = 5;
+    let gameOver = false;
 
     function updateScore() {
       scoreDiv.innerText = `Tangkap: ${score}/${target}`;
@@ -199,9 +224,13 @@ document.addEventListener("DOMContentLoaded", () => {
     randomCatPosition();
     updateScore();
 
-    const catInterval = setInterval(randomCatPosition, 1000);
+    const catInterval = setInterval(() => {
+      if (!gameOver) randomCatPosition();
+    }, 1000);
 
     function movePlayer(dx, dy) {
+      if (gameOver) return;
+
       const newX = Math.min(Math.max(player.offsetLeft + dx, 0), gameArea.clientWidth - 24);
       const newY = Math.min(Math.max(player.offsetTop + dy, 0), gameArea.clientHeight - 24);
       player.style.left = newX + "px";
@@ -214,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
         score++;
         updateScore();
         if (score >= target) {
+          gameOver = true;
           clearInterval(catInterval);
           handleWin();
         } else {
@@ -222,8 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // keyboard & D-pad
-    document.addEventListener("keydown", function(e) {
+    document.addEventListener("keydown", function (e) {
       if (e.key === "ArrowUp") movePlayer(0, -10);
       else if (e.key === "ArrowDown") movePlayer(0, 10);
       else if (e.key === "ArrowLeft") movePlayer(-10, 0);
@@ -235,15 +264,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".dpad .left").addEventListener("click", () => movePlayer(-10, 0));
     document.querySelector(".dpad .right").addEventListener("click", () => movePlayer(10, 0));
 
-    // HANDLE WIN & REWARD
     function handleWin() {
       subtitle.innerHTML = "🎉 Kamu berhasil menangkap 5 kucing!";
-
       gameArea.style.transition = "opacity 0.8s ease";
+      scoreDiv.style.transition = "opacity 0.8s ease";
       gameArea.style.opacity = 0;
+      scoreDiv.style.opacity = 0;
 
       setTimeout(() => {
         gameArea.remove();
+        scoreDiv.remove();
 
         subtitle.innerHTML = "<strong>Cihuyy! Kamu mendapatkan hadiah 🎁</strong><br><br>Tekan <strong>A</strong> untuk AMBIL, <strong>B</strong> untuk TIDAK";
 
@@ -268,6 +298,16 @@ document.addEventListener("DOMContentLoaded", () => {
         function takeGift() {
           cleanupRewardEvents();
           subtitle.innerHTML = "🎁 Yeay! Kamu berhasil mendapatkan hadiah! Selamat bersenang-senang!";
+
+          confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+
+          setTimeout(() => {
+            window.location.href = "flower.html";
+          }, 3000);
         }
 
         function declineGift() {
