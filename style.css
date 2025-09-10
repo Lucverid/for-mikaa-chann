@@ -1,4 +1,4 @@
-body { 
+body {
   margin: 0;
   font-family: 'Press Start 2P', cursive;
   background: radial-gradient(circle, #111 0%, #000 100%);
@@ -17,6 +17,7 @@ body {
   padding: 20px;
   box-shadow: 0 0 20px #0ff, 0 0 40px #00f2ff66;
   border: 2px solid #00ffcc66;
+  position: relative;
 }
 
 .screen {
@@ -51,7 +52,6 @@ body {
   text-shadow: 0 0 2px #0ff;
 }
 
-/* Tambahan agar subtitle bisa scroll dengan tombol pad */
 .subtitle:focus {
   outline: none;
 }
@@ -134,7 +134,8 @@ body {
 .ab-buttons {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  margin-left: 20px;
 }
 
 .circle {
@@ -180,4 +181,12 @@ body {
   text-align: center;
   color: #0ff;
   text-shadow: 0 0 5px #00ffff;
+}
+
+/* Layouting tombol dan dpad agar horizontal */
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
