@@ -125,7 +125,7 @@ body {
 .dpad .down { grid-area: down; }
 .dpad .left { grid-area: left; }
 .dpad .right { grid-area: right; }
-.dpad .center {
+.dpad .center { 
   grid-area: center;
   background: #0ff;
   box-shadow: 0 0 8px #0ff;
