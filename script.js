@@ -1,8 +1,8 @@
 const slides = [
-  "Hari ini adalah hari spesial 🎂 Karena kamu yang spesial sedang berulang tahun!",
-  "Semoga hari-harimu penuh tawa dan cinta dari orang-orang terdekat 🥳",
-  "Jangan lupa bersyukur, karena kamu telah melewati banyak hal luar biasa ✨",
-  "Selamat ulang tahun! Tetap semangat mengejar mimpi 💪❤️"
+  "Jyaa Mikaa Chann",
+  "Ekhem sudah tanggal 17 September aja Nich",
+  "Mwhehe Maaf ya Mikaa, aku ngga bisa ngerayain langsung. Tapi.. semoga dengan hadiah dan perayaan kecil ini bisa ngebuat Mikaa seneng",
+  "I'm proud of you, and I always will be <3"
 ];
 
 let currentSlide = 0;
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnA = document.querySelector(".circle:nth-child(1)");
   const btnB = document.querySelector(".circle:nth-child(2)");
 
-  // START
+  // START BUTTON
   startBtn.addEventListener("click", () => {
     if (slideStarted) return;
     slideStarted = true;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   });
 
-  // RESET
+  // RESET BUTTON
   selectBtn.addEventListener("click", () => {
     clearInterval(typingInterval);
     clearTimeout(nextSlideTimeout);
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bgMusic.currentTime = 0;
   });
 
-  // SHOW SLIDE
+  // SHOW SLIDE FUNCTION
   function showSlide(text) {
     subtitle.innerText = "";
     subtitle.style.whiteSpace = "normal";
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  // INIT PILIHAN A/B
+  // PILIHAN A/B SLIDE TERAKHIR
   function initChoiceEvents() {
     document.addEventListener("keydown", onChoice);
     btnA.addEventListener("click", handleClickA);
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleClickB() {
     cleanupChoiceEvents();
-    alert("Wah parah si kalo nggak dilanjut 😅");
+    subtitle.innerHTML = "😅 Wah parah si kalo nggak dilanjut!";
   }
 
   function onChoice(e) {
@@ -207,7 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
       player.style.left = newX + "px";
       player.style.top = newY + "px";
 
-      // cek tabrakan
       if (
         Math.abs(newX - cat.offsetLeft) < 24 &&
         Math.abs(newY - cat.offsetTop) < 24
@@ -216,15 +215,14 @@ document.addEventListener("DOMContentLoaded", () => {
         updateScore();
         if (score >= target) {
           clearInterval(catInterval);
-          alert("🎉 You Win! Kamu berhasil menangkap 5 kucing!");
-          resetGameScreen();
+          handleWin();
         } else {
           randomCatPosition();
         }
       }
     }
 
-    // keyboard & D-pad kontrol
+    // keyboard & D-pad
     document.addEventListener("keydown", function(e) {
       if (e.key === "ArrowUp") movePlayer(0, -10);
       else if (e.key === "ArrowDown") movePlayer(0, 10);
@@ -237,10 +235,47 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".dpad .left").addEventListener("click", () => movePlayer(-10, 0));
     document.querySelector(".dpad .right").addEventListener("click", () => movePlayer(10, 0));
 
-    function resetGameScreen() {
-      screen.innerHTML = "";
-      subtitle.innerText = "Press Start Button 🥞";
-      document.querySelector(".screen h1").style.display = "block";
+    // HANDLE WIN & REWARD
+    function handleWin() {
+      subtitle.innerHTML = "🎉 Kamu berhasil menangkap 5 kucing!";
+
+      gameArea.style.transition = "opacity 0.8s ease";
+      gameArea.style.opacity = 0;
+
+      setTimeout(() => {
+        gameArea.remove();
+
+        subtitle.innerHTML = "<strong>Cihuyy! Kamu mendapatkan hadiah 🎁</strong><br><br>Tekan <strong>A</strong> untuk AMBIL, <strong>B</strong> untuk TIDAK";
+
+        function onRewardChoice(e) {
+          if (e.key.toLowerCase() === "a") takeGift();
+          else if (e.key.toLowerCase() === "b") declineGift();
+        }
+
+        function handleClickA() { takeGift(); }
+        function handleClickB() { declineGift(); }
+
+        document.addEventListener("keydown", onRewardChoice);
+        btnA.addEventListener("click", handleClickA);
+        btnB.addEventListener("click", handleClickB);
+
+        function cleanupRewardEvents() {
+          document.removeEventListener("keydown", onRewardChoice);
+          btnA.removeEventListener("click", handleClickA);
+          btnB.removeEventListener("click", handleClickB);
+        }
+
+        function takeGift() {
+          cleanupRewardEvents();
+          subtitle.innerHTML = "🎁 Yeay! Kamu berhasil mendapatkan hadiah! Selamat bersenang-senang!";
+        }
+
+        function declineGift() {
+          cleanupRewardEvents();
+          subtitle.innerHTML = "😅 Oke deh, maybe next time ya!";
+        }
+
+      }, 800);
     }
   }
 });
