@@ -31,16 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
     "🎈 Happy Birthday!! Selamat mencari jati diri, hehehe -Tidak tahu ni punya siapa :v",
     "💪 Hari yang di nantikan sudah tiba, Happy Birthday Mikaa chann. Semoga apa yang kamu harap dan yang kamu tuju selalu dilancarkan ",
     "🌟 Jangan terlalu banyak pikiran Mika chann, biar tidurnya bisa nyenyak",
-    "✝️ Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu -Mazmur 20:4."",
-    " I Think I Love You *Ini beneran ya, tapi mohon maaf rasanya kerasa lebay😂"
+    "✝️ Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu -Mazmur 20:4",
+    "👾 Kalo kamu lagi kangen *Ya walau mustahil si. Mika boleh chat atau call. Moga aja bisa ketemu bareng lagi",
+    " I Think I Love You *Ini beneran ya, meskipun kerasa lebay si 😂",
+    "sdsdsdsd"
   ];
 
   const gallery = [
-    { src: "https://i.imgur.com/SmY0XGv.jpeg", caption: "Cantiknyaaa kamu! 😍" },
-    { src: "https://i.imgur.com/N92EjXz.jpeg", caption: "Mikaa & senyum manisnya ☀️" },
-    { src: "https://i.imgur.com/YFvYa6R.jpeg", caption: "Pose andalan! 💃" },
-    { src: "https://i.imgur.com/v4aBlch.jpeg", caption: "Tatapan mematikan 🔥" },
-    { src: "https://i.imgur.com/rZSzcvw.jpeg", caption: "Candid tapi tetap kece 📸" }
+    { src: "https://i.imgur.com/s0s6WrA.jpeg", caption: "kwowko sumimasen, ni lucuu parah si🤣" },
+    { src: "https://i.imgur.com/hvz0i3B.jpeg", caption: "Pemandangannya tenang dan orangnya juga lagi santuy" },
+    { src: "https://i.imgur.com/495N7Z1.jpeg", caption: "Inii.. ini kamuu? beneran?🥶" },
+    { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty 🤍" },
+    { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee 😒" },
+    { src: "", caption: "" },
+    
+    
   ];
 
   // Tombol menu
