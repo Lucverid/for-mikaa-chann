@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnTetris = document.getElementById('btn-tetris');
 
   const messages = [
-    "🎈 Hari ini spesial banget karena kamu spesial!",
-    "💪 Jangan lupa istirahat dan terus semangat ya!",
-    "🌟 Kamu punya banyak potensi, percaya diri terus!",
-    "🎂 Semoga ulang tahun kali ini membawa banyak berkah.",
-    "❤️ Terima kasih sudah menjadi dirimu yang luar biasa!"
+    "🎈 Happy Birthday!! Selamat mencari jati diri, hehehe -Tidak tahu ni punya siapa :v",
+    "💪 Hari yang di nantikan sudah tiba, Happy Birthday Mikaa chann. Semoga apa yang kamu harap dan yang kamu tuju selalu dilancarkan ",
+    "🌟 Jangan terlalu banyak pikiran Mika chann, biar tidurnya bisa nyenyak",
+    "✝️ Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu -Mazmur 20:4."",
+    " I Think I Love You *Ini beneran ya, tapi mohon maaf rasanya kerasa lebay😂"
   ];
 
   const gallery = [
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnTetris.addEventListener('click', () => {
-    subtitle.innerHTML = "🧱 Tetris belum tersedia ya... Tunggu update berikutnya! 😆";
+    subtitle.innerHTML = "🧱 Tetrisnya ngg ada Mik, aku-nya sedang mamlas ngomding";
   });
 
   // START
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentSlide = 0;
 
     title.style.display = "block";
-    subtitle.innerText = "Press Start Button 🥞";
+    subtitle.innerText = "Press Start Button 👾";
     subtitle.style.whiteSpace = "";
     subtitle.style.overflowY = "unset";
     subtitle.style.maxHeight = "";
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleClickA() { cleanupChoiceEvents(); startCatGame(); }
-  function handleClickB() { cleanupChoiceEvents(); subtitle.innerHTML = "😅 Wah parah si kalo nggak dilanjut!"; }
+  function handleClickB() { cleanupChoiceEvents(); subtitle.innerHTML = " Wah parah si kalo nggak dilanjut-_-!"; }
   function cleanupChoiceEvents() {
     document.removeEventListener("keydown", onChoice);
     btnA.removeEventListener("click", handleClickA);
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     screen.appendChild(scoreDiv);
 
     const player = document.createElement("div");
-    player.innerText = "😺";
+    player.innerText = "😾";
     player.style.position = "absolute";
     player.style.left = "10px";
     player.style.top = "50px";
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rightBtn.addEventListener("click", () => movePlayer(10, 0));
 
     function handleWin() {
-      subtitle.innerHTML = "🎉 Kamu berhasil menangkap 5 kucing!";
+      subtitle.innerHTML = "🎉 Mantap Mikaa, kocengnya dah ditangkap semua";
       gameArea.style.transition = "opacity 0.8s ease";
       scoreDiv.style.transition = "opacity 0.8s ease";
       gameArea.style.opacity = 0; scoreDiv.style.opacity = 0;
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function takeGift() {
           cleanupRewardEvents();
-          subtitle.innerHTML = "🎁 Yeay! Kamu berhasil mendapatkan hadiah! Selamat bersenang-senang!";
+          subtitle.innerHTML = "🎁 Widiiii dapat hadiah nihh";
           confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
 
           // Tampilkan YouTube
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function declineGift() {
           cleanupRewardEvents();
-          subtitle.innerHTML = "😅 Kamu melewatkan hadiahnya!";
+          subtitle.innerHTML = "Waduhh hadiahnya ketinggalan Mik";
         }
 
       }, 800);
