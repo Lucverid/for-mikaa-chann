@@ -65,14 +65,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnMusic.addEventListener('click', () => {
-    if (bgMusic.paused) {
-      bgMusic.play();
+  const bgMusic = document.getElementById('bg-music');
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
       subtitle.innerHTML = "🎵 Musik diputar!";
-    } else {
-      bgMusic.pause();
-      subtitle.innerHTML = "🎵 Musik dihentikan!";
-    }
-  });
+    }).catch(err => {
+      subtitle.innerHTML = "⚠️ Tidak bisa memutar musik, klik tombol lagi!";
+      console.error(err);
+    });
+  } else {
+    bgMusic.pause();
+    subtitle.innerHTML = "🎵 Musik dihentikan!";
+  }
+});
+
 
   btnTetris.addEventListener('click', () => {
     subtitle.innerHTML = "🧱 Tetrisnya ngg ada Mik, aku-nya sedang mamlas ngomding";
