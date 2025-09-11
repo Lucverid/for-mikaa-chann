@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "https://i.imgur.com/hvz0i3B.jpeg", caption: "Pemandangannya tenang dan orangnya juga lagi santuy" },
     { src: "https://i.imgur.com/495N7Z1.jpeg", caption: "Inii.. ini kamuu? beneran?🥶" },
     { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty 🤍" },
-    { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee 😒" },
+    { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee" },
+    { src: "https://i.imgur.com/DqjSlvd.jpeg", caption: "Adek kalo tahu 15 tahun kedepan, adek jadi kakak-kakak yang baik, cantik, dan kadang ngeselin tahu. And i wanna say :  Ku bahagia kau telah terlahir di dunia - Tulus" },
     { src: "", caption: "" },
     
     
