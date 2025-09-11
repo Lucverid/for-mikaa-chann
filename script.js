@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🎁 Pesan untuk MESSAGE
   const messages = [
-    "🎈 Hari ini spesial banget karena kamu spesial!",
+    "🎈 ",
     "💪 Jangan lupa istirahat dan terus semangat ya!",
     "🌟 Kamu punya banyak potensi, percaya diri terus!",
     "🎂 Semoga ulang tahun kali ini membawa banyak berkah.",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // EVENT: TETRIS Button
   btnTetris.addEventListener('click', () => {
-    subtitle.innerHTML = "🧱 Tetris belum tersedia ya... Tunggu update berikutnya! 😆";
+    subtitle.innerHTML = " Malas ngomding sumpah, sumimasen Mikaa chann✌️ ";
   });
 
   // EVENT: START
