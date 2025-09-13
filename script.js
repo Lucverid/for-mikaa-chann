@@ -80,9 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  btnTetris.addEventListener('click', () => {
-    subtitle.innerHTML = "🧱 Tetrisnya ngg ada Mik, aku-nya sedang mamlas ngomding";
-  });
+  const btnGuide = document.getElementById('btn-guide');
+
+btnGuide.addEventListener('click', () => {
+  subtitle.innerHTML = `
+    <div style="font-size:6px; text-align:left; line-height:1.6;">
+      <p class="blink">📘 Cara Menggunakan Gameboy Ucapan:</p>
+      <ol style="padding-left:15px;">
+        <li>Tekan tombol <strong>START</strong> untuk memulai slideshow ucapan.</li>
+        <li>Gunakan tombol <strong>A</strong> dan <strong>B</strong> untuk memilih di akhir slide.</li>
+        <li>Kalau pilih <strong>A</strong>, kamu akan main game tangkap kucing 🐱.</li>
+        <li>Kalau menang, kamu akan dapat hadiah kejutan 🎁.</li>
+        <li>Menu <strong>MESSAGE</strong> berisi ucapan-ucapan ulang tahun.</li>
+        <li>Menu <strong>GALLERY</strong> akan menampilkan foto-foto kenangan.</li>
+        <li>Menu <strong>MUSIC</strong> akan memutar atau menghentikan lagu latar.</li>
+        <li>Tekan tombol <strong>RESET</strong> untuk mengulang semuanya dari awal 🔁.</li>
+      </ol>
+    </div>
+  `;
+  subtitle.scrollTop = 0;
+});
+
 
   // START
   startBtn.addEventListener("click", () => {
