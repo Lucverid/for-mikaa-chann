@@ -35,13 +35,16 @@ body {
 }
 
 /* === Judul (Tidak ditengah) === */
+
 .screen h1 {
   margin: 0;
-  font-size: 10px;
+  font-size: 11px;
   color: #00f7ff;
   text-shadow: 0 0 5px #0ff;
-  text-align: left;
+  text-align: left;         /* ➜ ubah dari center ke left */
+  padding-left: 4px;        /* ➜ tambahkan padding biar gak terlalu nempel kiri */
 }
+
 
 /* === Subtitle (Berkedip di Tengah) === */
 .subtitle {
