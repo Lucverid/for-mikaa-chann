@@ -59,18 +59,23 @@
   </div>
 
   <script>
-    function login() {
-      const user = document.getElementById("username").value.trim();
-      const pass = document.getElementById("password").value.trim();
-      const error = document.getElementById("error-msg");
+   function login() {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+  const error = document.getElementById("error-msg");
 
-      if (user === "Mikhaela Nazaretha Kurniawan" && pass === "200805") {
-        document.getElementById("login-screen").style.display = "none";
-        document.getElementById("main-app").style.display = "block";
-      } else {
-        error.textContent = "Username atau password salah!";
-      }
-    }
+  if (user === "Mikhaela Nazaretha Kurniawan" && pass === "200805") {
+    // Hapus elemen login dari DOM
+    const loginScreen = document.getElementById("login-screen");
+    loginScreen.parentNode.removeChild(loginScreen);
+
+    // Tampilkan main app
+    document.getElementById("main-app").style.display = "block";
+  } else {
+    error.textContent = "Username atau password salah!";
+  }
+}
+
   </script>
 </body>
 </html>
