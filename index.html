@@ -10,23 +10,13 @@
 </head>
 <body>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FROM ME</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
-<body>
-
 <!-- Login Screen -->
 <div class="login-screen" id="login-screen">
   <div class="welcome-text">Welcome 👾</div>
   <h2>Masukkan Username dan Password</h2>
   <input type="text" id="username" placeholder="Username">
   <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">LOGIN</button>
+  <button id="btn-login">LOGIN</button>
   <div class="error-msg" id="error-msg"></div>
 </div>
 
@@ -55,8 +45,8 @@
       <div class="down"></div>
     </div>
     <div class="ab-buttons">
-      <button class="circle">A</button>
-      <button class="circle">B</button>
+      <button class="circle" id="btn-A">A</button>
+      <button class="circle" id="btn-B">B</button>
     </div>
   </div>
 
@@ -65,5 +55,22 @@
     <button id="start">START</button>
   </div>
 </div>
+
+<script>
+// LOGIN FUNCTION
+document.getElementById("btn-login").addEventListener("click", () => {
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+  const error = document.getElementById("error-msg");
+
+  if(user === "Mikhaela Nazaretha Kurniawan" && pass === "200805") {
+    document.getElementById("login-screen").style.display = "none";
+    document.getElementById("main-app").style.display = "block";
+  } else {
+    error.textContent = "Username atau password salah!";
+  }
+});
+</script>
+
 </body>
 </html>
