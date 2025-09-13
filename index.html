@@ -7,7 +7,83 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="login-screen" id="login-screen">
+    <div class="welcome-text">Welcome 👾</div>
+    <h2>Masukkan Username dan Password</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">LOGIN</button>
+    <div class="error-msg" id="error-msg"></div>
+  </div>
+
+  <!-- Gameboy Main App -->
+  <div class="gameboy" id="main-app" style="display: none;">
+    <div class="screen">
+      <h1 id="title">Hai Mikhaela Nazaretha Kurniawan!</h1>
+      <p class="subtitle blink">Press Start Button 🥞</p>
+    </div>
+
+    <div class="buttons-grid">
+      <button class="btn blue" id="btn-message">MESSAGE</button>
+      <button class="btn red" id="btn-gallery">GALLERY</button>
+      <button class="btn purple" id="btn-music">MUSIC</button>
+   <button class="btn green" id="btn-guide">GUIDE</button>
+
+
+    </div>
+
+    <audio id="bg-music" src="https://raw.githubusercontent.com/Lucverid/birthday-audio/main/Winners.mp3" preload="auto"></audio>
+
+    <div class="controls">
+      <div class="dpad">
+        <div class="up"></div>
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="down"></div>
+      </div>
+      <div class="ab-buttons">
+        <button class="circle">A</button>
+        <button class="circle">B</button>
+      </div>
+    </div>
+
+    <div class="bottom-buttons">
+      <button id="select">RESET</button>
+      <button id="start">START</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const error = document.getElementById("error-msg");
+
+      if (user === "Mikhaela Nazaretha Kurniawan" && pass === "200805") {
+        document.getElementById("login-screen").style.display = "none";
+        document.getElementById("main-app").style.display = "block";
+      } else {
+        error.textContent = "Username atau password salah!";
+      }
+    }
+  </script>
+</body>
+</html>
+
 <body>
 
   <!-- Login Screen -->
