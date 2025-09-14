@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
     "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya, meskipun sebentar tapi berbekas di kehidupan saya. Setiap moment saya catat, jadi tidak akan lupa",
     "🥳 Happy Birthday Mikhahela Nazaretha Kurniawan",
     "",
-
+  ];
+  
   const gallery = [
     { src: "https://i.imgur.com/s0s6WrA.jpeg", caption: "kwowko sumimasen, ni lucuu parah si🤣" },
     { src: "https://i.imgur.com/hvz0i3B.jpeg", caption: "Pemandangannya tenang dan orangnya juga lagi santuy" },
