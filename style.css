@@ -119,17 +119,16 @@ body {
   box-shadow: inset 0 0 8px #0ff;
 }
 
-/* === Judul (Rata Kiri) === */
+/* === Judul & Subtitle Rata Kiri === */
 .screen h1 {
   margin: 0;
   font-size: 11px;
   color: #00f7ff;
   text-shadow: 0 0 5px #0ff;
-  text-align: left;        /* ➜ judul rata kiri */
-  padding-left: 4px;       /* ➜ jarak dari kiri */
+  text-align: left;
+  padding-left: 4px;
 }
 
-/* === Subtitle === */
 .subtitle {
   font-size: 7px;
   margin-top: 40px;
@@ -137,7 +136,7 @@ body {
   max-height: 100px;
   overflow-y: auto;
   white-space: normal;
-  text-align: left;        /* ➜ biar teks slideshow/message rata kiri */
+  text-align: left;
   padding-left: 4px;
   scroll-behavior: smooth;
   color: #00ffee;
@@ -189,7 +188,6 @@ body {
   margin-top: 10px;
 }
 
-/* === D-Pad === */
 .dpad {
   display: grid;
   grid-template-areas:
@@ -198,7 +196,6 @@ body {
     ". down .";
   gap: 3px;
 }
-
 .dpad div {
   width: 20px;
   height: 20px;
@@ -208,9 +205,7 @@ body {
   box-shadow: 0 0 4px #00fff2;
   transition: background 0.2s ease;
 }
-.dpad div:hover {
-  background: #00aaff;
-}
+.dpad div:hover { background: #00aaff; }
 .dpad .up { grid-area: up; }
 .dpad .down { grid-area: down; }
 .dpad .left { grid-area: left; }
@@ -221,13 +216,12 @@ body {
   box-shadow: 0 0 8px #0ff;
 }
 
-/* === Tombol A & B (Vertikal) === */
+/* === Tombol A & B === */
 .ab-buttons {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
 .circle {
   width: 28px;
   height: 28px;
@@ -240,19 +234,17 @@ body {
   transition: background 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 0 4px #00ffff66;
 }
-
 .circle:hover {
   background: #00e0e0;
   box-shadow: 0 0 8px #00f2ff, 0 0 16px #00f2ff88;
 }
 
-/* === Tombol Start & Reset === */
+/* === Bottom Buttons === */
 .bottom-buttons {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
 }
-
 .bottom-buttons button {
   font-size: 7px;
   padding: 4px 8px;
@@ -264,7 +256,6 @@ body {
   box-shadow: 0 0 4px #00ffff88;
   transition: box-shadow 0.2s ease;
 }
-
 .bottom-buttons button:hover {
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffffaa;
 }
