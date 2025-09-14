@@ -10,26 +10,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const messages = [
     "🎈 Happy Birthday!! Selamat mencari jati diri, hehehe -Tidak tahu ni punya siapa :v",
-    "💪 Hari yang di nantikan sudah tiba, Happy Birthday Mikaa chann. Semoga apa yang kamu harap dan yang kamu tuju selalu dilancarkan ",
-    "🌟 Jangan terlalu banyak pikiran Mika chann, biar tidurnya bisa nyenyak",
-    "✝️ Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu -Mazmur 20:4",
-    "👾 Kalo kamu lagi kangen *Ya walau mustahil si. Mika boleh chat atau call. Moga aja bisa ketemu bareng lagi",
-    "😊 Maaf Mik, pernah ngebuat kamu nangis. Dan saya tidak bisa menyanggupi keinginan kamu untuk resign di bulan selanjutnya saja",
-    "😊 Maaf Mik, saya ngga bisa ngerayain langsung di ulang tahun kamu yang ke 18. Tapi semoga saja dengan hadiah kecil ini, kamu bisa seneng ",
-    "👍 Teruntuk Mikhaela Nazaretha, jujur saja kamu itu perempuan yang paling tegar dan berani. Jangan lupa untuk berterimakasih kepada dirimu, karena kamu sudah berhasil sampai detik ini",
-    "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya, meskipun sebentar tapi berbekas di kehidupan saya. Setiap moment saya catat, jadi tidak akan lupa",
-    "🥳 Happy Birthday Mikhaela Nazaretha Kurniawan",
+    "💪 Hari yang di nantikan sudah tiba, Happy Birthday Mikaa chann. Semoga apa yang kamu harap dan yang kamu tuju selalu dilancarkan ", <br>
+    "🌟 Jangan terlalu banyak pikiran Mika chann, biar tidurnya bisa nyenyak", <br>
+    "✝️ Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu -Mazmur 20:4", <br>
+    "👾 Kalo kamu lagi kangen *Ya walau mustahil si. Mika boleh chat atau call. Moga aja bisa ketemu bareng lagi", <br>
+    "😊 Maaf Mik, pernah ngebuat kamu nangis. Dan saya tidak bisa menyanggupi keinginan kamu untuk resign di bulan selanjutnya saja", <br>
+    "😊 Maaf Mik, saya ngga bisa ngerayain langsung di ulang tahun kamu yang ke 18. Tapi semoga saja dengan hadiah kecil ini, kamu bisa seneng ", <br>
+    "👍 Teruntuk Mikhaela Nazaretha, jujur saja kamu itu perempuan yang paling tegar dan berani. Jangan lupa untuk berterimakasih kepada dirimu, karena kamu sudah berhasil sampai detik ini", <br>
+    "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya, meskipun sebentar tapi berbekas di kehidupan saya. Setiap moment saya catat, jadi tidak akan lupa", <br>
+    "🥳 Happy Birthday Mikhaela Nazaretha Kurniawan",<br>
     ""
   ];
 
-  const gallery = [
+   const gallery = [
     { src: "https://i.imgur.com/s0s6WrA.jpeg", caption: "kwowko sumimasen, ni lucuu parah si🤣" },
     { src: "https://i.imgur.com/hvz0i3B.jpeg", caption: "Pemandangannya tenang dan orangnya juga lagi santuy" },
     { src: "https://i.imgur.com/495N7Z1.jpeg", caption: "Inii.. ini kamuu? beneran?🥶" },
     { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty 🤍" },
     { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee" },
     { src: "https://i.imgur.com/DqjSlvd.jpeg", caption: "Adek kalo tahu 15 tahun kedepan, adek jadi kakak-kakak yang baik, cantik, dan kadang ngeselin tahu. And i wanna say :  Ku bahagia kau telah terlahir di dunia - Tulus" },
-    { src: "https://i.imgur.com/vbxDOiB.jpeg", caption: "Nih Cepek, ngg usah bilang makasih" }
+    { src: "https://i.imgur.com/vbxDOiB.jpeg", caption: "Nih Cepek, ngg usah bilang makasih " },
+    { src: "", caption: "" },
+    
+    
   ];
 
   let currentSlide = 0, slideStarted = false, typingInterval = null, nextSlideTimeout = null, finalQuestionTimeout = null;
