@@ -143,6 +143,12 @@ body {
   text-shadow: 0 0 2px #0ff;
 }
 
+.subtitle-center {
+  text-align: center;   /* Rata tengah */
+  padding-left: 0;
+}
+
+
 .subtitle img {
   width: 100%;
   height: auto;
