@@ -11,226 +11,6 @@ body {
   overflow: hidden;
 }
 
-/* === Gameboy Container === */
-.gameboy {
-  width: 340px;
-  background: #1a1a1a;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 0 20px #0ff, 0 0 40px #00f2ff66;
-  border: 2px solid #00ffcc66;
-  position: relative;
-}
-
-/* === Screen Display === */
-.screen {
-  background: #000;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  height: 130px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: inset 0 0 8px #0ff;
-}
-
-/* === Judul (Tidak ditengah) === */
-
-.screen h1 {
-  margin: 0;
-  font-size: 11px;
-  color: #00f7ff;
-  text-shadow: 0 0 5px #0ff;
-  text-align: left;         /* ➜ ubah dari center ke left */
-  padding-left: 4px;        /* ➜ tambahkan padding biar gak terlalu nempel kiri */
-}
-
-
-/* === Subtitle (Berkedip di Tengah) === */
-.subtitle {
-  font-size: 8px;
-  margin-top: 50px;
-  line-height: 1.5;
-  max-height: 100px;
-  overflow-y: auto;
-  white-space: normal;
-  text-align: center;
-  padding-right: 4px;
-  scroll-behavior: smooth;
-  color: #00ffee;
-  text-shadow: 0 0 2px #0ff;
-}
-
-/* Efek Berkedip */
-.blink {
-  animation: blink 2s infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
-}
-
-.subtitle:focus {
-  outline: none;
-}
-
-.subtitle img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin: 6px 0;
-  box-shadow: 0 0 5px #00f2ffaa;
-}
-
-/* === Tombol Fitur === */
-.buttons-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
-  margin-bottom: 10px;
-}
-
-.btn {
-  font-size: 6px;
-  padding: 6px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 4px #00fff288;
-  text-shadow: 0 0 2px #000;
-}
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2aa;
-}
-
-.btn.blue { background-color: #2196f3; }
-.btn.red { background-color: #f44336; }
-.btn.purple { background-color: #9c27b0; }
-.btn.green { background-color: #4caf50; }
-
-/* === Kontrol Utama === */
-.controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-/* === D-Pad === */
-.dpad {
-  display: grid;
-  grid-template-areas:
-    ". up ."
-    "left center right"
-    ". down .";
-  gap: 3px;
-}
-
-.dpad div {
-  width: 20px;
-  height: 20px;
-  background: #444;
-  border-radius: 3px;
-  cursor: pointer;
-  box-shadow: 0 0 4px #00fff2;
-  transition: background 0.2s ease;
-}
-.dpad div:hover {
-  background: #00aaff;
-}
-
-.dpad .up { grid-area: up; }
-.dpad .down { grid-area: down; }
-.dpad .left { grid-area: left; }
-.dpad .right { grid-area: right; }
-.dpad .center {
-  grid-area: center;
-  background: #0ff;
-  box-shadow: 0 0 8px #0ff;
-}
-
-/* === Tombol A & B (Vertikal) === */
-.ab-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.circle {
-  width: 28px;
-  height: 28px;
-  background: #00ffff;
-  color: #000;
-  font-size: 10px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 4px #00ffff66;
-}
-.circle:hover {
-  background: #00e0e0;
-  box-shadow: 0 0 8px #00f2ff, 0 0 16px #00f2ff88;
-}
-
-/* === Tombol Start & Reset === */
-.bottom-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-}
-
-.bottom-buttons button {
-  font-size: 7px;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 3px;
-  background: #00ffff;
-  color: #000;
-  cursor: pointer;
-  box-shadow: 0 0 4px #00ffff88;
-  transition: box-shadow 0.2s ease;
-}
-.bottom-buttons button:hover {
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffffaa;
-}
-
-/* === Countdown === */
-.countdown {
-  font-size: 20px;
-  text-align: center;
-  color: #0ff;
-  text-shadow: 0 0 5px #00ffff;
-}
-/* === Global Body === */
-body {
-  margin: 0;
-  font-family: 'Press Start 2P', cursive;
-  background: radial-gradient(circle, #111 0%, #000 100%);
-  color: #00ffcc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* === Global Body === */
-body {
-  margin: 0;
-  font-family: 'Press Start 2P', cursive;
-  background: radial-gradient(circle, #111 0%, #000 100%);
-  color: #00ffcc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
 /* === Blink Animation === */
 .blink {
   animation: blink 2s infinite;
@@ -245,7 +25,6 @@ body {
   font-size: 14px;
   margin-bottom: 10px;
   color: #00ffff;
-  
 }
 
 /* === Login Screen === */
@@ -285,7 +64,6 @@ body {
   box-shadow: inset 0 0 4px #00ffee66;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
-
 }
 
 .login-screen input::placeholder {
@@ -318,9 +96,6 @@ body {
   text-shadow: 0 0 2px red;
 }
 
-/* === Gameboy Container (tetap sama seperti sebelumnya) === */
-/* Kamu bisa lanjutkan style Gameboy dari kode yang sebelumnya sudah kamu punya */
-
 /* === Gameboy Container === */
 .gameboy {
   width: 340px;
@@ -344,14 +119,17 @@ body {
   box-shadow: inset 0 0 8px #0ff;
 }
 
+/* === Judul (Rata Kiri) === */
 .screen h1 {
   margin: 0;
   font-size: 11px;
   color: #00f7ff;
   text-shadow: 0 0 5px #0ff;
-  text-align: center;
+  text-align: left;        /* ➜ judul rata kiri */
+  padding-left: 4px;       /* ➜ jarak dari kiri */
 }
 
+/* === Subtitle === */
 .subtitle {
   font-size: 7px;
   margin-top: 40px;
@@ -359,19 +137,19 @@ body {
   max-height: 100px;
   overflow-y: auto;
   white-space: normal;
-  text-align: center;
-  padding-right: 4px;
+  text-align: left;        /* ➜ biar teks slideshow/message rata kiri */
+  padding-left: 4px;
   scroll-behavior: smooth;
   color: #00ffee;
   text-shadow: 0 0 2px #0ff;
 }
 
-.blink {
-  animation: blink 2s infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+.subtitle img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 6px 0;
+  box-shadow: 0 0 5px #00f2ffaa;
 }
 
 /* === Tombol Menu === */
@@ -411,6 +189,7 @@ body {
   margin-top: 10px;
 }
 
+/* === D-Pad === */
 .dpad {
   display: grid;
   grid-template-areas:
@@ -419,6 +198,7 @@ body {
     ". down .";
   gap: 3px;
 }
+
 .dpad div {
   width: 20px;
   height: 20px;
@@ -441,11 +221,13 @@ body {
   box-shadow: 0 0 8px #0ff;
 }
 
+/* === Tombol A & B (Vertikal) === */
 .ab-buttons {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
+
 .circle {
   width: 28px;
   height: 28px;
@@ -458,17 +240,19 @@ body {
   transition: background 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 0 4px #00ffff66;
 }
+
 .circle:hover {
   background: #00e0e0;
   box-shadow: 0 0 8px #00f2ff, 0 0 16px #00f2ff88;
 }
 
-/* === Bottom Buttons === */
+/* === Tombol Start & Reset === */
 .bottom-buttons {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
 }
+
 .bottom-buttons button {
   font-size: 7px;
   padding: 4px 8px;
@@ -480,6 +264,15 @@ body {
   box-shadow: 0 0 4px #00ffff88;
   transition: box-shadow 0.2s ease;
 }
+
 .bottom-buttons button:hover {
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffffaa;
+}
+
+/* === Countdown === */
+.countdown {
+  font-size: 20px;
+  text-align: center;
+  color: #0ff;
+  text-shadow: 0 0 5px #00ffff;
 }
