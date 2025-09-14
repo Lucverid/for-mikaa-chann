@@ -18,18 +18,18 @@ document.addEventListener("DOMContentLoaded", function() {
     "😊 Maaf Mik, saya ngga bisa ngerayain langsung di ulang tahun kamu yang ke 18. Tapi semoga saja dengan hadiah kecil ini, kamu bisa seneng ",
     "👍 Teruntuk Mikhaela Nazaretha, jujur saja kamu itu perempuan yang paling tegar dan berani. Jangan lupa untuk berterimakasih kepada dirimu, karena kamu sudah berhasil sampai detik ini",
     "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya, meskipun sebentar tapi berbekas di kehidupan saya. Setiap moment saya catat, jadi tidak akan lupa",
-    "🥳 Happy Birthday Mikhahela Nazaretha Kurniawan",
-    "",
+    "🥳 Happy Birthday Mikhaela Nazaretha Kurniawan",
+    ""
   ];
-  
+
   const gallery = [
     { src: "https://i.imgur.com/s0s6WrA.jpeg", caption: "kwowko sumimasen, ni lucuu parah si🤣" },
     { src: "https://i.imgur.com/hvz0i3B.jpeg", caption: "Pemandangannya tenang dan orangnya juga lagi santuy" },
     { src: "https://i.imgur.com/495N7Z1.jpeg", caption: "Inii.. ini kamuu? beneran?🥶" },
     { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty 🤍" },
     { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee" },
-    { src: "https://i.imgur.com/DqjSlvd.jpeg", caption: "Adek kalo tahu 15 tahun kedepan, adek jadi kakak-kakak yang baik, cantik, dan kadang ngeselin tahu. And i wanna say :  Ku bahagia kau telah terlahir di dunia - Tulus" }
-    { src: "https://i.imgur.com/vbxDOiB.jpeg", caption: "Nih Cepek, ngg usah bilang makasih" },
+    { src: "https://i.imgur.com/DqjSlvd.jpeg", caption: "Adek kalo tahu 15 tahun kedepan, adek jadi kakak-kakak yang baik, cantik, dan kadang ngeselin tahu. And i wanna say :  Ku bahagia kau telah terlahir di dunia - Tulus" },
+    { src: "https://i.imgur.com/vbxDOiB.jpeg", caption: "Nih Cepek, ngg usah bilang makasih" }
   ];
 
   let currentSlide = 0, slideStarted = false, typingInterval = null, nextSlideTimeout = null, finalQuestionTimeout = null;
@@ -64,13 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnA = document.getElementById("btnA");
     const btnB = document.getElementById("btnB");
 
-    // --- MESSAGE ---
     btnMessage.addEventListener('click', () => {
       subtitle.innerHTML = messages.map(msg => `<div>${msg}</div>`).join('');
       subtitle.scrollTop = 0;
     });
 
-    // --- GALLERY ---
     btnGallery.addEventListener('click', () => {
       subtitle.innerHTML = gallery.map(g =>
         `<div style="margin-bottom:10px;">
@@ -80,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
       subtitle.scrollTop = 0;
     });
 
-    // --- MUSIC ---
     btnMusic.addEventListener('click', () => {
       if(bgMusic.paused){ 
         bgMusic.play().then(()=>{ subtitle.innerHTML="🎵 Musik diputar!"; }).catch(()=>{subtitle.innerHTML="⚠️ Tidak bisa memutar musik!"}); 
@@ -90,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    // --- GUIDE ---
     btnGuide.addEventListener('click', ()=>{
       subtitle.innerHTML = `<div style="font-size:6px; text-align:left; line-height:1.6;">
         <p class="blink">📘 Cara Menggunakan Gameboy Ucapan:</p>
@@ -105,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
       subtitle.scrollTop = 0;
     });
 
-    // --- START ---
     startBtn.addEventListener("click", ()=>{
       if(slideStarted) return;
       slideStarted = true;
@@ -128,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function() {
       },1000);
     });
 
-    // --- RESET ---
     selectBtn.addEventListener("click", ()=>{
       clearInterval(typingInterval);
       clearTimeout(nextSlideTimeout);
@@ -144,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function() {
       bgMusic.pause(); bgMusic.currentTime=0;
     });
 
-    // --- SLIDESHOW ---
     function showSlide(text){
       subtitle.innerText="";
       subtitle.style.whiteSpace="normal";
@@ -170,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function() {
       },300);
     }
 
-    // --- PILIHAN A/B ---
     function initChoiceEvents(){
       btnA.addEventListener("click", handleClickA);
       btnB.addEventListener("click", handleClickB);
@@ -192,7 +184,6 @@ document.addEventListener("DOMContentLoaded", function() {
       btnB.removeEventListener("click", handleClickB); 
     }
 
-    // --- MINI GAME CAT + HADIAH ---
     function startCatGame(){
       const screen = document.querySelector(".screen");
       const subtitle = document.querySelector(".subtitle");
@@ -235,7 +226,6 @@ document.addEventListener("DOMContentLoaded", function() {
         else if(e.key==="ArrowRight") movePlayer(10,0);
       });
 
-      // DIRECTION BUTTONS
       document.querySelector(".dpad .up").onclick = ()=>movePlayer(0,-10);
       document.querySelector(".dpad .down").onclick = ()=>movePlayer(0,10);
       document.querySelector(".dpad .left").onclick = ()=>movePlayer(-10,0);
