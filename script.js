@@ -5,20 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     "Jyaa Mikaa Chann :)",
     "Ekhem sudah tanggal 17 September aja Nih",
     "Mwhehe Maaf ya Mikaa, aku ngga bisa ngerayain langsung. Tapi.. semoga dengan hadiah dan perayaan kecil ini bisa ngebuat Mikaa seneng",
-    "I'm proud of you, and I always will be <3"
+    "I'm proud of you, and I always will be"
   ];
 
  const messages = [
   "🎈 <strong>Happy Birthday!!</strong><br>Selamat mencari jati diri, hehehe -Tidak tahu ni punya siapa :v",
   "💪 Hari yang dinantikan sudah tiba,<br><strong>Happy Birthday Mikaa chann!</strong><br>Semoga apa yang kamu harap dan yang kamu tuju selalu dilancarkan.",
   "🌟 Jangan terlalu banyak pikiran Mika chann,<br>biar tidurnya bisa nyenyak.",
-  "✝️ <em>Mazmur 20:4</em><br>Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu.",
+  "✝️ <em>Mazmur 20:4</em> Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu.",
   "👾 Kalo kamu lagi kangen (ya walau mustahil sih 😅),<br>Mika boleh chat atau call. Semoga aja bisa ketemu bareng lagi.",
-  "😊 Maaf Mik,<br>pernah ngebuat kamu nangis. Dan saya tidak bisa menyanggupi keinginan kamu untuk resign di bulan selanjutnya saja.",
+  "😊 Maaf Mik,<br>Saya tidak bisa menyanggupi keinginan kamu untuk resignnya di bulan selanjutnya saja.",
   "😊 Maaf Mik,<br>saya ngga bisa ngerayain langsung ulang tahun kamu yang ke-18.<br> Tapi semoga aja dengan hadiah kecil ini, kamu bisa seneng.",
   "👍 Teruntuk Mikhaela Nazaretha,<br><strong>kamu itu perempuan yang paling tegar dan berani.</strong><br>Jangan lupa berterimakasih ke dirimu, karena sudah berhasil sampai detik ini.",
-  "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya.<br>Meskipun sebentar tapi berbekas.<br>Setiap momen saya catat, jadi tidak akan lupa.",
-  "🥳 <strong>Happy Birthday Mikhaela Nazaretha Kurniawan</strong><br>🎂",
+  "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya.<br>Meskipun sebentar<br>Setiap momen saya catat, jadi tidak akan lupa.",
+  "😇 <strong>Jangan lupa terimakasih ke mama kamu, dan bilangin bika ambonnya enak pisan</strong><br>",
+"🥳 <strong>Happy Birthday Mikhaela Nazaretha Kurniawan</strong><br>🎂",
   ""
 ];
 
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { src: "https://i.imgur.com/s0s6WrA.jpeg", caption: "kwowko sumimasen, ni lucuu parah si🤣" },
     { src: "https://i.imgur.com/hvz0i3B.jpeg", caption: "Pemandangannya tenang dan orangnya juga lagi santuy" },
     { src: "https://i.imgur.com/495N7Z1.jpeg", caption: "Inii.. ini kamuu? beneran?🥶" },
-    { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty 🤍" },
+    { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty" },
     { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee" },
     { src: "https://i.imgur.com/DqjSlvd.jpeg", caption: "Adek kalo tahu 15 tahun kedepan, adek jadi kakak-kakak yang baik, cantik, dan kadang ngeselin tahu. And i wanna say :  Ku bahagia kau telah terlahir di dunia - Tulus" },
     { src: "https://i.imgur.com/vbxDOiB.jpeg", caption: "Nih Cepek, ngg usah bilang makasih " },
