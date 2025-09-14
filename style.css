@@ -129,19 +129,19 @@ body {
   padding-left: 4px;
 }
 
-/* === Subtitle / Message === */
-.subtitle-message {
+/* === Subtitle === */
+.subtitle {
   font-size: 7px;
+  margin-top: 40px;
   line-height: 1.5;
   max-height: 100px;
   overflow-y: auto;
   white-space: normal;
-  text-align: left;
-  padding: 4px 6px;       /* jarak dalam teks lebih rapi */
-  margin-bottom: 6px;     /* jarak antar paragraf */
+  text-align: left;  /* default kiri */
+  padding-left: 4px;
+  scroll-behavior: smooth;
   color: #00ffee;
   text-shadow: 0 0 2px #0ff;
-  scroll-behavior: smooth;
 }
 
 /* === Subtitle Center (Press Start / Gallery) === */
@@ -155,14 +155,14 @@ body {
   max-width: 200px;
   height: auto;
   border-radius: 4px;
-  margin: 6px auto;      /* gambar di tengah */
+  margin: 6px auto;
   display: block;
   box-shadow: 0 0 5px #00f2ffaa;
 }
 
 .subtitle-center em {
   display: block;
-  margin-top: 2px;       /* caption lebih dekat ke gambar */
+  margin-top: 4px;
   font-style: normal;
   color: #00ffee;
   text-shadow: 0 0 2px #0ff;
