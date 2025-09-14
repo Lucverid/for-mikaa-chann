@@ -119,7 +119,7 @@ body {
   box-shadow: inset 0 0 8px #0ff;
 }
 
-/* === Judul & Subtitle Rata Kiri === */
+/* === Judul (rata kiri) === */
 .screen h1 {
   margin: 0;
   font-size: 11px;
@@ -129,6 +129,7 @@ body {
   padding-left: 4px;
 }
 
+/* === Subtitle === */
 .subtitle {
   font-size: 7px;
   margin-top: 40px;
@@ -136,25 +137,36 @@ body {
   max-height: 100px;
   overflow-y: auto;
   white-space: normal;
-  text-align: left;
+  text-align: left;  /* default kiri */
   padding-left: 4px;
   scroll-behavior: smooth;
   color: #00ffee;
   text-shadow: 0 0 2px #0ff;
 }
 
+/* === Subtitle Center (Press Start / Gallery) === */
 .subtitle-center {
-  text-align: center;   /* Rata tengah */
+  text-align: center;
   padding-left: 0;
 }
 
-
-.subtitle img {
+.subtitle-center img {
   width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 4px;
-  margin: 6px 0;
+  margin: 6px auto;
+  display: block;
   box-shadow: 0 0 5px #00f2ffaa;
+}
+
+.subtitle-center em {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  color: #00ffee;
+  text-shadow: 0 0 2px #0ff;
+  text-align: center;
 }
 
 /* === Tombol Menu === */
@@ -202,6 +214,7 @@ body {
     ". down .";
   gap: 3px;
 }
+
 .dpad div {
   width: 20px;
   height: 20px;
@@ -212,6 +225,7 @@ body {
   transition: background 0.2s ease;
 }
 .dpad div:hover { background: #00aaff; }
+
 .dpad .up { grid-area: up; }
 .dpad .down { grid-area: down; }
 .dpad .left { grid-area: left; }
@@ -228,6 +242,7 @@ body {
   flex-direction: column;
   gap: 6px;
 }
+
 .circle {
   width: 28px;
   height: 28px;
