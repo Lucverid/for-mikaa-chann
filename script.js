@@ -14,8 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
     "🌟 Jangan terlalu banyak pikiran Mika chann, biar tidurnya bisa nyenyak",
     "✝️ Kiranya diberikan-Nya kepadamu apa yang diinginkan hatimu dan dijadikan-Nya berhasil segala rencanamu -Mazmur 20:4",
     "👾 Kalo kamu lagi kangen *Ya walau mustahil si. Mika boleh chat atau call. Moga aja bisa ketemu bareng lagi",
-    "I Think I Love You *Ini beneran ya, meskipun kerasa lebay si 😂"
-  ];
+    "😊 Maaf Mik, pernah ngebuat kamu nangis. Dan saya tidak bisa menyanggupi keinginan kamu untuk resign di bulan selanjutnya saja",
+    "😊 Maaf Mik, saya ngga bisa ngerayain langsung di ulang tahun kamu yang ke 18. Tapi semoga saja dengan hadiah kecil ini, kamu bisa seneng ",
+    "👍 Teruntuk Mikhaela Nazaretha, jujur saja kamu itu perempuan yang paling tegar dan berani. Jangan lupa untuk berterimakasih kepada dirimu, karena kamu sudah berhasil sampai detik ini",
+    "😁 Terimakasih Mika sudah pernah hadir di kehidupan saya, meskipun sebentar tapi berbekas di kehidupan saya. Setiap moment saya catat, jadi tidak akan lupa",
+    "🥳 Happy Birthday Mikhahela Nazaretha Kurniawan",
+    "",
 
   const gallery = [
     { src: "https://i.imgur.com/s0s6WrA.jpeg", caption: "kwowko sumimasen, ni lucuu parah si🤣" },
@@ -24,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { src: "https://i.imgur.com/wYShwsy.jpeg", caption: "Ini foto terfavorit, you look so pretty 🤍" },
     { src: "https://i.imgur.com/Mw1Wz9Q.jpeg", caption: "Parah ngg diajak, okee okee" },
     { src: "https://i.imgur.com/DqjSlvd.jpeg", caption: "Adek kalo tahu 15 tahun kedepan, adek jadi kakak-kakak yang baik, cantik, dan kadang ngeselin tahu. And i wanna say :  Ku bahagia kau telah terlahir di dunia - Tulus" }
+    { src: "https://i.imgur.com/vbxDOiB.jpeg", caption: "Nih Cepek, ngg usah bilang makasih" },
   ];
 
   let currentSlide = 0, slideStarted = false, typingInterval = null, nextSlideTimeout = null, finalQuestionTimeout = null;
