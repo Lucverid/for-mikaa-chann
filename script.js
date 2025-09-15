@@ -93,14 +93,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btnGuide.addEventListener('click', ()=>{
       subtitle.innerHTML = `<div style="font-size:6px; text-align:left; line-height:1.6;">
-        <p>📘 Cara Menggunakan Gameboy Ucapan:</p>
+        <p>📘 Arahan cara penggunaan biar Mika tidak pusing : </p>
         <ol style="padding-left:15px;">
-          <li>Tekan tombol <strong>START</strong> untuk memulai slideshow ucapan.</li>
-          <li>Gunakan tombol <strong>A</strong> dan <strong>B</strong> untuk memilih di akhir slide.</li>
-          <li>Menu <strong>MESSAGE</strong> berisi ucapan ulang tahun.</li>
-          <li>Menu <strong>GALLERY</strong> menampilkan foto kenangan.</li>
-          <li>Menu <strong>MUSIC</strong> memutar/hentikan musik latar.</li>
-          <li>Tekan tombol <strong>RESET</strong> untuk mengulang semuanya 🔁.</li>
+          <li> Jangan klik tombol <strong>START</strong> sebelum tombol mesage dan gallery dan music</li>
+          <li> Jika bagian slide sudah dibaca <strong> Mesage & Galery</strong> Maka <strong> Klik START</strong> untuk memulai </li>
+          <li> Jangan klik tombol <strong> 
+START</strong> secara berulang</li>
+          <li> Jika sudah memenangkan <strong>MINI GAME</strong> Silahkan klik tombol A</li>
+          <li> Jika muncul <strong>HADIAHNYA</strong> klik tombol Music untuk mematikannya</li>
+          <li> Web ini <strong>TIDAK AKAN HILANG</strong> jadi bisa buat kenang-kenangan juga 🔁.</li>
         </ol></div>`;
       subtitle.scrollTop = 0;
     });
