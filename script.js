@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btnGuide.addEventListener('click', ()=>{
       subtitle.innerHTML = `<div style="font-size:6px; text-align:left; line-height:1.6;">
-        <p class="blink">📘 Cara Menggunakan Gameboy Ucapan:</p>
+        <p>📘 Cara Menggunakan Gameboy Ucapan:</p>
         <ol style="padding-left:15px;">
           <li>Tekan tombol <strong>START</strong> untuk memulai slideshow ucapan.</li>
           <li>Gunakan tombol <strong>A</strong> dan <strong>B</strong> untuk memilih di akhir slide.</li>
